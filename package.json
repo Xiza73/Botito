@@ -1,0 +1,29 @@
+{
+  "name": "Botito",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@replit/database": "^2.0.0",
+    "ascii-table": "0.0.9",
+    "common-tags": "^1.8.0",
+    "database": "0.0.2",
+    "db.js": "^0.15.0",
+    "death-games": "^1.2.2",
+    "discord.js": "^12.5.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "fortnite": "^4.3.2",
+    "node-fetch": "^2.6.1",
+    "node-localstorage": "^2.1.6",
+    "pug": "^3.0.0",
+    "random-puppy": "^1.1.0",
+    "xmlhttprequest": "^1.8.0"
+  }
+}
