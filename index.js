@@ -158,6 +158,9 @@ function action(comando, msg){
   var comandos = {
 
     //Prueba DB
+    "git" : function() {
+      msg.channel.send('git is worked');
+    },
     "insert": function(){
       let texto = msg.toString().split(" ");
       let name = texto[2];
