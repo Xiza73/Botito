@@ -159,7 +159,7 @@ function action(comando, msg){
 
     //Prueba DB
     "git" : function() {
-      msg.channel.send('git is worked');
+      msg.channel.send('git with ssh');
     },
     "insert": function(){
       let texto = msg.toString().split(" ");
