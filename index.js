@@ -15,7 +15,7 @@ var roles = {
 }
 const root = 'https://res.cloudinary.com/dnbgxu47a/image/upload/v1612837856';
 const estrellitas = [
-  "0.png", "1.gif", "2.gif", "3.gif", "4.png", "1.gif", "3.gif" 
+  "0_v3st2a.png", "1.gif", "2.gif", "3.gif", "4.png", "1.gif", "3.gif" 
 ];
 
 
@@ -289,20 +289,38 @@ function action(comando, msg){
       msg.channel.send(`${texto[1]} muere rechuchatumare >:v`); 
     },
     "morning": function(){
-      const exampleEmbed = {
-          color: 0xECFF07,
-          title: 'Buenos días estrellitas!',
-          description: `La tierra les dice holaaaaa`,
-          thumbnail: {
-            url: `${root}/willy.jpg`,
-          },
-          image: {
-            url: `${root}/estrellitas/${estrellitas[random(0, 4)]}`,
-          },
-          timestamp: new Date(),
-        };
+        let texto = msg.toString().split(" ");
+        if(texto[1] === undefined){
+          const exampleEmbed = {
+              color: 0xECFF07,
+              title: 'Buenos días estrellitas!',
+              description: `La tierra les dice holaaaaa`,
+              thumbnail: {
+                url: `${root}/willy.jpg`,
+              },
+              image: {
+                url: `${root}/estrellitas/${estrellitas[random(0, 4)]}`,
+              },
+              timestamp: new Date(),
+            };
+            msg.channel.send({ embed: exampleEmbed });
+        }else{
+          const exampleEmbed = {
+              color: 0xECFF07,
+              title: 'Buenos días estrellitas!',
+              description: `La tierra les dice holaaaaa`,
+              thumbnail: {
+                url: `${root}/willy.jpg`,
+              },
+              image: {
+                url: `${root}/estrellitas/${estrellitas[texto[1]]}`,
+              },
+              timestamp: new Date(),
+          };
+          msg.channel.send({ embed: exampleEmbed });
+        }
 
-        msg.channel.send({ embed: exampleEmbed });
+        
     },
     "jueves": function(){
       const exampleEmbed = {
