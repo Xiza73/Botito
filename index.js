@@ -4,7 +4,6 @@ const app = express();
 const Discord = require('discord.js');
 const db = require('./database/db.js');
 
-
 //const client = new Discord.Client();
 //VAR
 var usuarios = null;
@@ -72,6 +71,10 @@ app.get('/', function (req, res) {
       client.channels.cache.get('752251099355938856').send({ embed: exampleEmbed });
     }
   }
+})
+
+app.get('/wsp', function(req, res){
+  res.render('./pages/whatsapp');
 })
 
 /*app.get('/home/Botito/multimedia', function (req, res) {
